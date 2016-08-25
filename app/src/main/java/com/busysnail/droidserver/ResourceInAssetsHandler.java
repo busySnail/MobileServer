@@ -14,6 +14,10 @@ import java.io.PrintWriter;
  * address: Xidian University
  */
 
+/**
+ * 处理访问静态网页的handler
+ */
+
 public class ResourceInAssetsHandler implements IResourceUriHandler {
 
     private String acceptPrefix = "/static/";

@@ -34,6 +34,12 @@ public class StreamToolkit {
     }
 
 
+    /**
+     * 读输入流返回字节数组
+     * @param is
+     * @return
+     * @throws IOException
+     */
     public static byte[] readRawFromStream(InputStream is) throws IOException {
         ByteArrayOutputStream bos=new ByteArrayOutputStream();
         byte[] buffer=new byte[10240];

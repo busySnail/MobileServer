@@ -9,6 +9,13 @@ import java.io.IOException;
  */
 
 public interface IResourceUriHandler {
+    /**
+     * 该uri是否路由到此handler
+     */
     boolean accept(String uri);
+
+    /**
+     *处理逻辑
+     */
     void handle(String uri,HttpContext httpContext) throws IOException;
 }

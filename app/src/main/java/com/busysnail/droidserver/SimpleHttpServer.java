@@ -81,8 +81,6 @@ public class SimpleHttpServer {
                         Log.d("busySnial","a remote peer accepted..."+remotepeer.getRemoteSocketAddress());
                         onAcceptRemotePeer(remotepeer);
                     }
-
-
                 });
 
             }
@@ -100,13 +98,11 @@ public class SimpleHttpServer {
     private void onAcceptRemotePeer(Socket remotePeer) {
 
         try {
-//            remotePeer.getOutputStream().write("connect sucessfully!".getBytes());
             InputStream is=remotePeer.getInputStream();
             httpContext.setUnderlySocket(remotePeer);
             String headLine=null;
             //提取相对路径
             String resourceUri=headLine=StreamToolkit.readLine(is).split(" ")[1];
-            Log.d("busySnail",resourceUri);
             while((headLine=StreamToolkit.readLine(is))!=null){
                 if(headLine.equals("\r\n")){
                     break;
@@ -127,7 +123,6 @@ public class SimpleHttpServer {
             }
         } catch (IOException e) {
             Log.e("busySnail",e.toString());
-            e.printStackTrace();
         }
     }
 

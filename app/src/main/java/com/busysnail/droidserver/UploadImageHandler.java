@@ -12,6 +12,9 @@ import java.io.PrintWriter;
  * address: Xidian University
  */
 
+/**
+ * 处理上传图片的handler
+ */
 public class UploadImageHandler implements IResourceUriHandler {
 
     private String acceptPrefix="/upload_image/";
